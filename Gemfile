@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'execjs'
 #gem 'therubyracer'
-gem 'rails', '3.2.9'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,6 +13,8 @@ group :development, :test do
 
 	gem 'sqlite3'
 gem 'rspec-rails'
+
+gem 'capybara'
 end
 # Gems used only for assets and not required
 # in production environments by default.
