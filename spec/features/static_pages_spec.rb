@@ -1,9 +1,9 @@
 require 'spec_helper'
- require 'rspec/rails'
- require 'capybara/rspec'
 
 describe "Static pages" do 
+	include Capybara::DSL
 	let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+
 	describe "Home page" do
 
     it "should have the h1 'Sample App'" do
