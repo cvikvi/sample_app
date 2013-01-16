@@ -16,11 +16,20 @@ describe User do
   before do
     @user = User.new(name: "Example User", email: "user@example.com")
   end
-
+describe "when email address is already taken" do
+	before do
+		user_with_same_email = @user.dup
+		user_with_same_email = @user.email.upcase
+		user_with_same_email.save
+	end
+	it { should_not be_valid }
+	
+end
   subject { @user }
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
+  it { should respond_to(:password_digest) }
 
   it { should be_valid }
 
